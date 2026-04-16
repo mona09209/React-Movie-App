@@ -28,7 +28,7 @@ function MovieTabs({ tabs }) {
             <button
               key={index}
               onClick={() => setActive(index)}
-              className={`relative z-10 snap-center px-3 py-2 text-xs font-semibold whitespace-nowrap transition sm:px-8 sm:text-base
+              className={`relative z-10 snap-center px-3 py-2 text-xs font-semibold whitespace-nowrap transition sm:px-6 sm:text-base
                 ${active === index ? "text-white" : "text-gray-400"}
               `}
             >

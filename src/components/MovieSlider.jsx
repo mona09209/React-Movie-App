@@ -10,7 +10,7 @@ function MovieSlider({ title,description, movies }) {
   const nextRef = useRef(null);
 
   return (
-    <section className="px-8 md:px-16 mt-18 md:mt-16 text-white hero-circle">
+    <section className="px-8 md:px-16 mt-16 text-white hero-circle">
 
        <div className="mb-8 flex items-end justify-between">
           <div>
@@ -31,7 +31,7 @@ function MovieSlider({ title,description, movies }) {
           ref={prevRef}
           className="absolute left-0 top-1/2 cursor-pointer -translate-y-1/2 z-20
                      bg-black/60 backdrop-blur p-3 rounded-full
-                     hidden group-hover:flex">
+                     ">
           <ArrowLeft size={28} className="text-red-500" />
         </button>
 
@@ -40,7 +40,7 @@ function MovieSlider({ title,description, movies }) {
           ref={nextRef}
           className="absolute right-0 top-1/2 cursor-pointer -translate-y-1/2 z-20
                      bg-black/60 backdrop-blur p-3 rounded-full
-                     hidden group-hover:flex">
+                    ">
           <ArrowRight  size={28} className="text-red-500"/>
         </button>
 
