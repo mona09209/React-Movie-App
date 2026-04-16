@@ -10,7 +10,7 @@ function MovieSlider({ title,description, movies }) {
   const nextRef = useRef(null);
 
   return (
-    <section className="px-6 md:px-16 mt-14 text-white hero-circle">
+    <section className="px-8 md:px-16 mt-18 md:mt-16 text-white hero-circle">
 
        <div className="mb-8 flex items-end justify-between">
           <div>

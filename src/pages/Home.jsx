@@ -15,7 +15,6 @@ function Home() {
   const [trending, setTrending] = useState([]);
   const [popular, setPopular] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
-  const [topRated, setToprated] = useState([]);
   const [nowplaying, setNowplaying] = useState([]);
 
   const getTrending = async () => {
@@ -55,17 +54,6 @@ function Home() {
     }
   };
 
-  const getTopRated = async () => {
-    try {
-      const { data } = await api.get(
-        `/movie/top_rated?api_key=${apiKey}`
-      );
-         console.log(data.results)
-      setToprated(data.results.slice(0, 10));
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
 
   const getNowplaying = async () => {
     try {
@@ -89,8 +77,8 @@ function Home() {
   return (
 
     <div>
-      <Hero />
-    <MovieSlider
+      <Hero className="animate-fadeIn" />
+    <MovieSlider 
   title="Trending Now" description="Handpicked for your cinematic taste"
   movies={trending.slice(0,8)}
 />
@@ -104,10 +92,7 @@ function Home() {
       title: "Popular",
       content: <MovieGrid movies={popular.slice(0,10)} />
     },
-     {
-      title: "Top Rated",
-      content: <MovieGrid movies={topRated.slice(0,10)} />
-    },
+     
     {
       title: "Upcoming",
       content: <MovieGrid movies={upcoming.slice(0,10)} />
